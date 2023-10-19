@@ -1,0 +1,22 @@
+[provider]
+cluster = "localnet"
+wallet = "./keypairs/update-authority.json"
+
+[programs.mainnet]
+rewards_center = "E2PSH444f3ScPpuNChXYLrv7KfcWWNdJvQKwfkaw3wM"
+
+[programs.devnet]
+rewards_center = "E2PSH444f3ScPpuNChXYLrv7KfcWWNdJvQKwfkaw3wM"
+
+[programs.testnet]
+rewards_center = "E2PSH444f3ScPpuNChXYLrv7KfcWWNdJvQKwfkaw3wM"
+
+[programs.localnet]
+rewards_center = "E2PSH444f3ScPpuNChXYLrv7KfcWWNdJvQKwfkaw3wM"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/init-pool.ts"
+# test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/stake-entry/stake-unstake-pnft.test.ts"
+
+# [test]
+# startup_wait = 10000

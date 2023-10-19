@@ -1,0 +1,34 @@
+[package]
+name = "rewards-center"
+version = "1.0.0"
+description = "rewards center"
+edition = "2021"
+homepage = ""
+repository = ""
+authors = [""]
+license = "AGPL-3.0"
+keywords = ["solana", "cardinal"]
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "rewards_center"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+getrandom = { version = "0.2", features = ["custom"] }
+anchor-lang = { version = "0.26.0", features = ["init-if-needed"] }
+anchor-spl = { version = "0.26.0", features = ["metadata"]}
+solana-program = "1.10.41"
+spl-token = { version = "3.3.0", features = ["no-entrypoint"] }
+mpl-token-metadata = { version = "1.9.1", features = ["no-entrypoint"] }
+mpl-token-auth-rules = "1.1.0"
+cardinal-creator-standard = { version = "^2.2.0", features = ["cpi"] }
+
+[dev-dependencies]
+proptest = { version = "1.0" }
