@@ -29,6 +29,7 @@ spl-token = { version = "3.3.0", features = ["no-entrypoint"] }
 mpl-token-metadata = { version = "1.9.1", features = ["no-entrypoint"] }
 mpl-token-auth-rules = "1.1.0"
 cardinal-creator-standard = { version = "^2.2.0", features = ["cpi"] }
+solana-security-txt = "1.1.1"
 
 [dev-dependencies]
 proptest = { version = "1.0" }

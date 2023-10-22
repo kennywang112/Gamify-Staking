@@ -26,7 +26,23 @@ pub mod utils;
 
 use anchor_lang::prelude::*;
 
-declare_id!("E2PSH444f3ScPpuNChXYLrv7KfcWWNdJvQKwfkaw3wM");
+use solana_security_txt::security_txt;
+
+#[cfg(not(feature = "no-entrypoint"))]
+security_txt! {
+    // Required fields
+    name: "tradingtrain",
+    project_url: "https://github.com/kennywang112/Gamify_Staking",
+    contacts: "kennywang2003@gmail.com",
+    policy: "https://github.com/solana-labs/solana/blob/master/SECURITY.md",
+    // Optional Fields
+    acknowledgements: "
+The following hackers could've stolen all our money but didn't:
+- Neodyme
+"
+}
+
+declare_id!("ErbSL4EyyTrYPoVeUrs7VPpcf2LBS7mWbSv4ivv538hA");
 
 
 #[program]

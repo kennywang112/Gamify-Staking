@@ -61,11 +61,11 @@ pub fn assert_payment_info(stake_pool: Pubkey, action: Action, payment_info: Pub
 pub fn handle_payment_info<'info>(
     remaining_accounts: &mut Iter<AccountInfo<'info>>
 ) -> Result<()> {
-    let payment_info = Pubkey::from_str("DQo6cj9Ak2rrxBSvs7njKfxzhWPgxrauf1Q9D5mqn8Nk").unwrap();
+    // let payment_info = Pubkey::from_str("DQo6cj9Ak2rrxBSvs7njKfxzhWPgxrauf1Q9D5mqn8Nk").unwrap();
 
     // check payment info
     let payment_info_account_info = next_account_info(remaining_accounts)?;
-    assert_eq!(payment_info, payment_info_account_info.key());
+    // assert_eq!(payment_info, payment_info_account_info.key());
     let payment_info_account = Account::<PaymentInfo>::try_from(payment_info_account_info)?;
     // check amount
     if payment_info_account.payment_amount == 0 {
